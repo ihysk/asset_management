@@ -41,5 +41,7 @@ class AssetCalulator:
 if __name__ == '__main__':
     calc = AssetCalulator()
     calc.load_stock_data('stocks.json')
-    print(calc.get_original_amount())
-    print(calc.get_current_appraised_amount())
+    orig = calc.get_original_amount()
+    curr = calc.get_current_appraised_amount()
+    print(f'Orig: {orig:,.2f} USD')
+    print(f'Curr: {curr:,.2f} USD (+{(curr-orig):,.2f} USD)')
